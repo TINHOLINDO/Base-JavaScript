@@ -15,22 +15,50 @@ let area;
 
 if(forma === "retângulo"){
     area = altura * comprimento
-}else{
+}else if(forma === "triângulo"){
     area = (altura * comprimento) / 2
+} else {
+console.log("Deveria ser uma")
 }
 
-console.log(area)
+console.log(area);
 
 // const -> Utilizada para criar "variáveis" que são fixas, que não se alteram
-// Condições booleanas (Trukly ou falsy)
+// Condições booleanas (Truly ou falsy)
 // 0 = false
 // 1 = true
 
 const usuarioLogado = true;
 const contaPaga = false;
 
-console.log(0 == false);
-console.log(contaPaga == 0)
-console.log(contaPaga === 0)
+console.log(0 == false); // True
+console.log(contaPaga == 0) // True
+console.log(contaPaga === 0) // False
+console.log("" == false); // True
+console.log(1 == true); // True
 
-//continua slide 13...
+// Nulo e indefinido
+// Nulo -> vazio ou nada
+
+let Victor;
+let Luana = null;
+let numero = 3;
+let text0 = "Eu gosto de programação <3"
+
+// Consultando os tipos de variáveis;
+
+console.log(typeof Victor)
+console.log(typeof Luana);
+console.log(typeof numero);
+console.log(typeof texto);
+
+//  Conversão de variável
+
+const numeroNumber = 390;
+const numeroString = "390"
+
+console.log(numeroNumber == numeroString); // compara apenas o valor
+console.log(numeroNumber === numeroString) // compara também o tipo
+console.log(numeroNumber + numeroString); // concatenação
+console.log(numeroNumber + Number(numeroString)) // Soma de números
+

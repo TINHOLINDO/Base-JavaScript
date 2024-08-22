@@ -15,7 +15,7 @@ function imprimeTexto(texto) {
     console.log(texto)
 }
 
-// 2) Chamarr/executar a função
+// 2) Chamar/executar a função
 
 imprimeTexto(x)
 imprimeTexto("Eu sou aluno")
@@ -37,6 +37,7 @@ function nomeIdade(nome, idade){
     return `Meu nome é ${nome} e minha idade é ${idade}`
 }
 
+//A ordem dos parâmetros é importante!!
 imprimeTexto(nomeIdade("Tinho", 17))
 imprimeTexto(nomeIdade(17, "Victor"))
 
@@ -46,4 +47,29 @@ function multiplicacao(numero4 = 2, numero5 = 5){
     return numero4 * numero5
 }
 
-imprimeTexto(multiplicacao(somaDeNumeros(3,4), somaDeNumeros(5,10)));
+imprimeTexto(multiplicacao(somaDeNumeros(3,4), somaDeNumeros(5,10))); 
+
+// expressão de função
+
+const constanteSoma = function(nume1, nume2) {return nume1 + nume2}
+
+console.log(constanteSoma(3,6))
+
+// Funções e var são "Listadas" no topo do arquivo
+
+// Arrow function
+
+const apresentaArrow = nome => `meu nome é ${nome}`;
+const somaEmFlecha = (nu1, nu2) => nu1 + nu2;
+
+console.log(apresentaArrow("André"))
+console.log(somaEmFlecha(2,4))
+
+const SomaNumeroPequenos = (num1, num2) => {
+    if(num1 > 10 || num2 > 10){
+        return "Essa função é apenas para números pequenos"
+    } else {
+        return num1 + num2 
+    }
+}
+
